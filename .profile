@@ -2,8 +2,7 @@
 if [ -d "${HOME}/bin" ] ; then
   PATH=$HOME/bin:$PATH
 
-  # source colors
-  if [ -e "${HOME}/bin/base16-default.dark.sh" ] ; then
+  if [ $TERM_PROGRAM != "Apple_Terminal" -a -e "${HOME}/bin/base16-default.dark.sh" ] ; then
     source "${HOME}/bin/base16-default.dark.sh"
   fi
 fi

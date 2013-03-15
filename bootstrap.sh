@@ -32,4 +32,14 @@ unset doIt
 # Create cache dirs:
 mkdir -p ~/.cache/vim/{swap,backup,undo}
 
+if [[ `grep "# Added by dotfiles/bootstrap.sh" $HOME/.bash_profile` == "" ]]; then
+cat >> $HOME/.bash_profile <<EOF
+
+# Added by dotfiles/bootstrap.sh
+if [ -f ~/.profile ]; then
+  . ~/.profile
+fi
+EOF
+fi
+
 source ~/.profile
