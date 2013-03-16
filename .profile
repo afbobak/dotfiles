@@ -2,7 +2,7 @@
 if [ -d "${HOME}/bin" ] ; then
   PATH=$HOME/bin:$PATH
 
-  if [ -e "${HOME}/bin/base16-default.dark.sh" ] && [ "${TERM}" = "Linux" ] ; then
+  if [ "${TERM}" = "Linux" ] && [ -e "${HOME}/bin/base16-default.dark.sh" ] ; then
     source "${HOME}/bin/base16-default.dark.sh"
   fi
 fi
@@ -46,4 +46,4 @@ alias gff='git flow feature'
 
 export EDITOR=vi
 
-PS1="\e[31m\]\u\e[0m@\e[34m\h\e[0m(\W)> "
+PS1="\e[34m\]\u@\h\e[0m(\W)> "
