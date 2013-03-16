@@ -2,7 +2,7 @@
 if [ -d "${HOME}/bin" ] ; then
   PATH=$HOME/bin:$PATH
 
-  if [ $TERM_PROGRAM != "Apple_Terminal" -a -e "${HOME}/bin/base16-default.dark.sh" ] ; then
+  if [ -e "${HOME}/bin/base16-default.dark.sh" ] && [ "${TERM}" = "Linux" ] ; then
     source "${HOME}/bin/base16-default.dark.sh"
   fi
 fi
