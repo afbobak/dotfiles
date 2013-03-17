@@ -46,4 +46,4 @@ alias gff='git flow feature'
 
 export EDITOR=vi
 
-PS1="\e[34m\]\u@\h\e[0m(\W)> "
+PS1="\[\033[34m\]\u@\h:\[\033[00m\]\[\033[01;34m\]\W\[\033[00m\]> "
