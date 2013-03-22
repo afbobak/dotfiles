@@ -9,6 +9,7 @@ git submodule init
 git submodule update
 
 function doIt() {
+  chmod 750 .ssh
   rsync --exclude ".git/" \
         --exclude=".gitmodules" \
         --exclude=".vim/bundle/*/.git" \
