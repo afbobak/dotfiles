@@ -1,0 +1,4 @@
+[
+  { "keys": ["super+,", "super+;"], "command": "align_tab", "args": {"user_input": ":/l1f1"} },
+  { "keys": ["super+,", "super+="], "command": "align_tab", "args": {"user_input": "=/l1f1"} }
+]

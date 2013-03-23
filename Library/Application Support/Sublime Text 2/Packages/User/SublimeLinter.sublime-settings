@@ -1,0 +1,21 @@
+{
+    // Javascript linter: "gjslint" to use the closure javascript linter (if available),
+    // or either "jshint" or "jslint" to use a built in linter.
+    "javascript_linter": "jshint",
+
+    // jshint: options for linting JavaScript. See http://www.jshint.com/options/ for more info.
+    // By deault, eval is allowed.
+    "jshint_options":
+    {
+        // To fix column positions for JSHint errors you may want to add `"indent": 1` to your
+        // **User** "jshint_options". This issue affects users with tabs for indentation.
+        // This fix was reverted due to a conflict with using the `"white": true` option.
+        // "indent": 1,
+        "evil": true,
+        "regexdash": true,
+        "browser": true,
+        "wsh": true,
+        "trailing": true,
+        "sub": true
+    }
+}

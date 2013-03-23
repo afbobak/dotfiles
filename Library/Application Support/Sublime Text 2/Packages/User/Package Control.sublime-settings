@@ -1,0 +1,19 @@
+{
+	"auto_upgrade_last_run": null,
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"AlignTab",
+		"DocBlockr",
+		"Emmet",
+		"Emmet Css Snippets",
+		"Git",
+		"Http Requester",
+		"Nodejs",
+		"Package Control",
+		"Prefixr",
+		"SideBarEnhancements",
+		"Stylus",
+		"SublimeLinter"
+	]
+}
