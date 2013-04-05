@@ -22,7 +22,7 @@ export PATH
 
 if [[ `ls --help 2> /dev/null | grep color` == "" ]] ; then
   alias ls='ls -hFG'
-  alias ll='ls -AlhFG'
+  alias ll='ls -aAlhFG'
 else
   alias ls='ls -hF --color=tty'
   alias ll='ls -alhF --color=tty'
