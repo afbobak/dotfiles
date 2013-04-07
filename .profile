@@ -7,11 +7,6 @@ if [ -d "${HOME}/bin" ] ; then
   fi
 fi
 
-# Add XCode bin on MacOS X
-if [ -d "/Applications/Xcode.app/Contents/Developer/usr/bin" ] ; then
-  PATH=/Applications/Xcode.app/Contents/Developer/usr/bin:$PATH
-fi
-
 if [ -d "/usr/local/sbin" ] ; then
   PATH=/usr/local/sbin:$PATH
 fi
