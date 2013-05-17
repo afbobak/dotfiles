@@ -10,12 +10,13 @@ git submodule update
 
 function doIt() {
   chmod 750 .ssh
-  rsync --exclude ".git/" \
+  rsync --exclude=".git/" \
         --exclude=".gitmodules" \
         --exclude=".vim/bundle/*/.git" \
-        --exclude ".DS_Store" \
-        --exclude "bootstrap.sh" \
-        --exclude "README.md" \
+        --exclude="misc" \
+        --exclude=".DS_Store" \
+        --exclude="bootstrap.sh" \
+        --exclude="README.md" \
         -av . ~
 }
 
