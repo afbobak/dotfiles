@@ -14,7 +14,9 @@ set nobackup
 set nowritebackup
 set noswapfile
 " Enable mouse
-set mouse=nv
+if has('mouse')
+  set mouse=nv
+endif
 " Share OS clipboard
 set clipboard=unnamed
 " Auto append suffixes
@@ -33,7 +35,9 @@ endif
 colorscheme solarized
 highlight CursorLineNr ctermfg=yellow
 " Print margin
-set colorcolumn=80
+if v:version >= 703
+  set colorcolumn=80
+endif
 " Highlight text exceeding the print margin
 highlight OverLength ctermbg=red ctermfg=white
 match OverLength /\%80v.\+/
