@@ -47,4 +47,9 @@ alias gff='git flow feature'
 export EDITOR=vi
 export TERM=xterm-256color
 
+LS_COLORS='no=00:di=34:tw=33;01:ow=33;01:ex=32:ln=36'
+LS_COLORS=$LS_COLORS':fi=00:pi=00:so=00:bd=00:cd=00:or=00:mi=00'
+LS_COLORS=$LS_COLORS':*.tgz=31:*.gz=31:*.zip=31:*.bz2=31:*.tar=31'
+export LS_COLORS
+
 PS1="\[\033[31m\]\u\[\033[00m\]@\[\033[34m\]\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]> "
