@@ -12,7 +12,8 @@ function doIt() {
   chmod 750 .ssh
   rsync --exclude=".git/" \
         --exclude=".gitmodules" \
-        --exclude=".vim/bundle/*/.git" \
+        --exclude=".vim/bundle/*/.git/" \
+        --exclude=".vim/bundle/*/.git*" \
         --exclude="misc/" \
         --exclude=".DS_Store" \
         --exclude="bootstrap.sh" \
