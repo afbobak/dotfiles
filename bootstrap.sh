@@ -13,7 +13,7 @@ function doIt() {
   rsync --exclude=".git/" \
         --exclude=".gitmodules" \
         --exclude=".vim/bundle/*/.git" \
-        --exclude="misc" \
+        --exclude="misc/" \
         --exclude=".DS_Store" \
         --exclude="bootstrap.sh" \
         --exclude="README.md" \
