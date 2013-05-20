@@ -1,6 +1,9 @@
 call pathogen#infect()
 set nocompatible
-
+" Store swap files in fixed location, not current directory.
+set dir=~/.cache/vim/swap//,.
+set undodir=~/.cache/vim/undo//,.
+set backupdir=~/.cache/vim/backup//,.
 " Indentation
 set smartindent
 set shiftwidth=2 softtabstop=2 tabstop=2 expandtab
@@ -63,7 +66,7 @@ noremap <Leader>t :vimgrep /FIXME\\|TODO/g
 " Tabularize on = and :
 vnoremap <Leader>= :Tabularize /=<CR>
 vnoremap <Leader>: :Tabularize /:<CR>
-" Expand %% to diretory of current buffer
+" Expand %% to directory of current buffer
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 " File types
