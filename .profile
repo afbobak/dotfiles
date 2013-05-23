@@ -37,6 +37,18 @@ function g {
    git status --short --branch
  fi
 }
+function parse_git_branch() {
+  NAME=`git symbolic-ref HEAD 2>/dev/null | cut -d"/" -f 3`
+  if [[ "$NAME" == "master" ]]; then
+    echo -en "\033[35m#$NAME\033[00m"
+  elif [[ "$NAME" == "develop" ]]; then
+    echo -en "\033[32m#$NAME\033[00m"
+  elif [[ "$NAME" == "" ]]; then
+    echo -en ""
+  else
+    echo -en "\033[36m#$NAME\033[00m"
+  fi
+}
 
 # Git flow
 alias gff='git flow feature'
@@ -52,4 +64,4 @@ LS_COLORS=$LS_COLORS':fi=00:pi=00:so=00:bd=00:cd=00:or=00:mi=00'
 LS_COLORS=$LS_COLORS':*.tgz=31:*.gz=31:*.zip=31:*.bz2=31:*.tar=31'
 export LS_COLORS
 
-PS1="\[\033[31m\]\u\[\033[00m\]@\[\033[34m\]\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]> "
+PS1="\[\033[31m\]\u\[\033[00m\]@\[\033[34m\]\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$(parse_git_branch)> "
