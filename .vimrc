@@ -30,7 +30,7 @@ set encoding=utf-8
 " Enable syntax highlighting
 syntax on
 " Color
-if has('gui_running')
+if $SSH_CONNECTION == ''
 	set background=light
 else
 	set background=dark
