@@ -64,4 +64,8 @@ LS_COLORS=$LS_COLORS':fi=00:pi=00:so=00:bd=00:cd=00:or=00:mi=00'
 LS_COLORS=$LS_COLORS':*.tgz=31:*.gz=31:*.zip=31:*.bz2=31:*.tar=31'
 export LS_COLORS
 
-PS1="\[\033[31m\]\u\[\033[00m\]@\[\033[34m\]\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$(parse_git_branch)> "
+if [[ "${USER}" == "root" ]]; then
+  PS1="\[\033[31m\]==== YOU ARE ROOT ====\n\u\[\033[00m\]@\[\033[34m\]\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$(parse_git_branch)> "
+else
+  PS1="\[\033[31m\]\u\[\033[00m\]@\[\033[34m\]\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$(parse_git_branch)> "
+fi
