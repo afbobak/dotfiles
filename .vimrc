@@ -1,4 +1,5 @@
 call pathogen#infect()
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 set nocompatible
 " Store swap files in fixed location, not current directory.
 set dir=~/.cache/vim/swap//,.
@@ -85,7 +86,7 @@ augroup END
 
 " Customize Powerline
 let g:Powerline_symbols = "fancy"
-call Pl#Theme#RemoveSegment('fileformat')
-call Pl#Theme#RemoveSegment('lineinfo')
+" call Pl#Theme#RemoveSegment('fileformat')
+" call Pl#Theme#RemoveSegment('lineinfo')
 " Snipmate
 let g:snippets_dir="~/.vim/snippets"
