@@ -11,11 +11,16 @@ if [ -d "/usr/local/sbin" ] ; then
   PATH=/usr/local/sbin:$PATH
 fi
 
-if [ -d "/usr/local/bin" ] ; then
-  PATH=/usr/local/bin:$PATH
-fi
-
 export PATH
+
+if [ -z $JAVA_HOME ] ; then
+  if [[ `uname` = "Darwin" ]]; then
+    JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
+  elif [[ `uname` = "Linux" ]]; then
+    JAVA_HOME=
+  fi
+  export JAVA_HOME
+fi
 
 # Aliases
 # #######
