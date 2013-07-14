@@ -17,7 +17,7 @@ if [ -z $JAVA_HOME ] ; then
   if [[ `uname` = "Darwin" ]]; then
     JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
   elif [[ `uname` = "Linux" ]]; then
-    JAVA_HOME=
+    JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:/bin/java::")
   fi
   export JAVA_HOME
 fi
