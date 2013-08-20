@@ -38,6 +38,9 @@ else
 endif
 colorscheme solarized
 highlight CursorLineNr ctermfg=yellow
+if $USER == 'root'
+	highlight Normal ctermbg=lightred
+endif
 " Print margin
 if v:version >= 703
   set colorcolumn=80
