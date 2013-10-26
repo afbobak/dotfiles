@@ -37,3 +37,6 @@
 [submodule ".vim/bundle/flavored-markdown"]
 	path = .vim/bundle/flavored-markdown
 	url = http://github.com/jtratner/vim-flavored-markdown.git
+[submodule "misc/powerline-fonts"]
+	path = misc/powerline-fonts
+	url = https://github.com/Lokaltog/powerline-fonts.git
