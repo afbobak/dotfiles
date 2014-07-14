@@ -121,7 +121,7 @@ autocmd BufEnter *.json set filetype=javascript
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " Diff current buffer with original file
-command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis | wincmd p | diffthis
+command! DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis | wincmd p | diffthis
 
 " Flavored Markdown by default
 augroup markdown
