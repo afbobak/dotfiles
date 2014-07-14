@@ -22,6 +22,34 @@ if [ -z $JAVA_HOME ] ; then
   export JAVA_HOME
 fi
 
+# See https://bbs.archlinux.org/viewtopc.php?id=167081
+GPG_AGENT=/usr/bin/gpg-agent
+if [ -x "${GPG_AGENT}" ]; then
+  # Check validity of GPG_SOCKET (in case of session crash)
+  GPG_AGENT_INFO_FILE="${HOME}/.gpg-agent-info"
+  if [ -f "${GPG_AGENT_INFO_FILE}" ]; then
+    GPG_AGENT_PID=`cat ${GPG_AGENT_INFO_FILE} | grep GPG_AGENT_INFO | cut -f2 -d:`
+    GPG_PID_NAME=`cat /proc/${GPG_AGENT_PID}/comm`
+    if [ ! "x${GPG_PID_NAME}" = "xgpg-agent" ]; then
+      rm -f "${GPG_AGENT_INFO_FILE}" 2>&1 >/dev/null
+    else
+      GPG_SOCKET=`cat "${GPG_AGENT_INFO_FILE}" | grep GPG_AGENT_INFO_FILE | cut -f1 d: | cut -f2 d=`
+      if ! test -S "${GPG_SOCKET}" -a -O "${GPG_SOCKET}"; then
+        rm -f "${GPG_AGENT_INFO_FILE}" 2>&1 >/dev/null
+      fi
+    fi
+    unset GPG_AGENT_PID GPG_SOCKET GPG_PID_NAME SSH_AUTH_SOCK
+  fi
+
+  if [ -f "${GPG_AGENT_INFO_FILE}" ]; then
+    eval "$(cat "${GPG_AGENT_INFO_FILE}")"
+    eval "$(cut -d= -f 1 "${GPG_AGENT_INFO_FILE}" | xargs echo export)"
+    export GPG_TTY=$(tty)
+  else
+    eval "$(${GPG_AGENT} -s --enable-ssh-support --allow-preset-passphrase --daemon --write-env-file)"
+  fi
+fi
+
 # Aliases
 # #######
 
