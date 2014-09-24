@@ -25,7 +25,9 @@ set noerrorbells
 
 " Store swap files in fixed location, not current directory.
 set dir=~/.cache/vim/swap//,.
-set undodir=~/.cache/vim/undo//,.
+if exists("+persistent_undo")
+  set undodir=~/.cache/vim/undo//,.
+endif
 set backupdir=~/.cache/vim/backup//,.
 " Do not create backup and swap files
 set nobackup
@@ -34,7 +36,11 @@ set noswapfile
 
 " Indentation
 set smartindent
-set shiftwidth=2 softtabstop=2 tabstop=2 expandtab
+if $USER == 'root'
+  set shiftwidth=2 softtabstop=8 tabstop=8 expandtab
+else
+  set shiftwidth=2 softtabstop=2 tabstop=2 expandtab
+endif
 
 " Show line numbers
 set number
@@ -61,17 +67,21 @@ set exrc
 set encoding=utf-8
 
 " Enable syntax highlighting
-syntax on
-" Color
-if $SSH_CONNECTION == ''
-	set background=light
-else
-	set background=dark
+if &t_Co >= 2 || has("gui_running")
+  syntax on
 endif
-colorscheme solarized
-highlight CursorLineNr ctermfg=yellow
-if $USER == 'root'
-	highlight Normal ctermbg=lightred
+" Color
+if &t_Co >= 256 || has("gui_running")
+  if $SSH_CONNECTION == ''
+    set background=light
+  else
+    set background=dark
+  endif
+  colorscheme solarized
+  highlight CursorLineNr ctermfg=yellow
+  " if $USER == 'root'
+  "   highlight Normal ctermbg=lightred
+  " endif
 endif
 
 " Print margin
