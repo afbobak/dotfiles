@@ -46,7 +46,7 @@ if [ -x "${GPG_AGENT}" ]; then
     eval "$(cut -d= -f 1 "${GPG_AGENT_INFO_FILE}" | xargs echo export)"
     export GPG_TTY=$(tty)
   else
-    eval "$(${GPG_AGENT} -s --enable-ssh-support --allow-preset-passphrase --daemon --write-env-file)"
+    ${GPG_AGENT} -s --enable-ssh-support --allow-preset-passphrase --daemon --write-env-file "${HOME}/.gpg-agent-info"
   fi
 fi
 

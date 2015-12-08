@@ -42,6 +42,7 @@ cat >> $HOME/.bash_profile <<EOF
 if [ -f ~/.profile ]; then
   . ~/.profile
 fi
+[[ -r ~/.bashrc ]] && . ~/.bashrc
 EOF
 fi
 
