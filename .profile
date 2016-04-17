@@ -50,6 +50,10 @@ if [ -x "${GPG_AGENT}" ]; then
   fi
 fi
 
+if [ -f /usr/bin/keychain ]; then
+  eval `keychain --eval id_rsa`
+fi
+
 # Aliases
 # #######
 
