@@ -65,6 +65,7 @@ else
   alias ll='ls -alhF --color=tty'
 fi
 alias grep='grep --color=tty'
+alias reboot='echo "WARNING: to reboot manually type: /sbin/reboot"'
 
 # Git status nicety
 function g {
