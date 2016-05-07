@@ -65,6 +65,8 @@ else
   alias ll='ls -alhF --color=tty'
 fi
 alias grep='grep --color=tty'
+alias shutdown='echo "WARNING: to shutdown manually type: /sbin/shutdown"'
+alias poweroff='echo "WARNING: to poweroff manually type: /sbin/poweroff"'
 alias reboot='echo "WARNING: to reboot manually type: /sbin/reboot"'
 
 # Git status nicety
