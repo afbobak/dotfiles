@@ -1,42 +1,42 @@
 [submodule ".vim/bundle/surround"]
 	path = .vim/bundle/surround
-	url = http://github.com/tpope/vim-surround.git
+	url = https://github.com/tpope/vim-surround.git
 [submodule ".vim/bundle/fugitive"]
 	path = .vim/bundle/fugitive
-	url = http://github.com/tpope/vim-fugitive.git
+	url = https://github.com/tpope/vim-fugitive.git
 [submodule ".vim/bundle/nerdtree"]
 	path = .vim/bundle/nerdtree
-	url = http://github.com/scrooloose/nerdtree.git
+	url = https://github.com/scrooloose/nerdtree.git
 [submodule ".vim/bundle/tabular"]
 	path = .vim/bundle/tabular
-	url = http://github.com/godlygeek/tabular.git
+	url = https://github.com/godlygeek/tabular.git
 [submodule ".vim/bundle/powerline"]
 	path = .vim/bundle/powerline
-	url = http://github.com/Lokaltog/powerline.git
+	url = https://github.com/Lokaltog/powerline.git
 [submodule ".vim/bundle/stylus"]
 	path = .vim/bundle/stylus
-	url = http://github.com/wavded/vim-stylus.git
+	url = https://github.com/wavded/vim-stylus.git
 [submodule ".vim/bundle/unimpaired"]
 	path = .vim/bundle/unimpaired
-	url = http://github.com/tpope/vim-unimpaired.git
+	url = https://github.com/tpope/vim-unimpaired.git
 [submodule ".vim/bundle/sensible"]
 	path = .vim/bundle/sensible
-	url = http://github.com/tpope/vim-sensible.git
+	url = https://github.com/tpope/vim-sensible.git
 [submodule ".vim/bundle/mustache"]
 	path = .vim/bundle/mustache
-	url = http://github.com/juvenn/mustache.vim.git
+	url = https://github.com/juvenn/mustache.vim.git
 [submodule ".vim/bundle/snipmate"]
 	path = .vim/bundle/snipmate
-	url = http://github.com/msanders/snipmate.vim.git
+	url = https://github.com/msanders/snipmate.vim.git
 [submodule ".vim/bundle/reveal-in-finder"]
 	path = .vim/bundle/reveal-in-finder
-	url = http://github.com/henrik/vim-reveal-in-finder.git
+	url = https://github.com/henrik/vim-reveal-in-finder.git
 [submodule ".vim/bundle/markdown"]
 	path = .vim/bundle/markdown
-	url = http://github.com/tpope/vim-markdown.git
+	url = https://github.com/tpope/vim-markdown.git
 [submodule ".vim/bundle/flavored-markdown"]
 	path = .vim/bundle/flavored-markdown
-	url = http://github.com/jtratner/vim-flavored-markdown.git
+	url = https://github.com/jtratner/vim-flavored-markdown.git
 [submodule "misc/powerline-fonts"]
 	path = misc/powerline-fonts
 	url = https://github.com/Lokaltog/powerline-fonts.git
