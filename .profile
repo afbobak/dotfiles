@@ -64,6 +64,8 @@ else
   alias ls='ls -hF --color=tty'
   alias ll='ls -alhF --color=tty'
 fi
+alias tm='tmux attach || tmux'
+alias v='vim'
 alias grep='grep --color=tty'
 alias shutdown='echo "WARNING: to shutdown manually type: /sbin/shutdown"'
 alias poweroff='echo "WARNING: to poweroff manually type: /sbin/poweroff"'
