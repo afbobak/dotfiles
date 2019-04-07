@@ -1,5 +1,10 @@
+" https://github.com/vim/vim/issues/3117
+if has('python3')
+  silent! python3 1
+endif
+
 call pathogen#infect()
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+runtime! plugin/sensible.vim
 set nocompatible
 
 " Fix background erase in tmux
