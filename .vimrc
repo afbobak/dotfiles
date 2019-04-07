@@ -144,10 +144,34 @@ augroup markdown
   au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
 augroup END
 
-" Customize Powerline
-let g:Powerline_symbols = "fancy"
-" call Pl#Theme#RemoveSegment('fileformat')
-" call Pl#Theme#RemoveSegment('lineinfo')
+" Airline
+let g:airline_theme           = 'hybrid'
+let g:airline_section_z       = '%3p%%'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#hunks#enabled = 0
+let g:airline#extensions#default#section_truncate_width={
+  \ 'b' : 88,
+  \ 'x' : 110,
+  \ 'y' : 130,
+  \ 'z' : 88
+  \ }
+let g:airline#extensions#ctrlp#color_template = 'replace'
+let airline#extensions#tmuxline#snapshot_file = '~/.tmux/tmuxline.conf'
+
+" Bufferline
+let g:bufferline_echo           = 0
+let g:bufferline_rotate         = 1
+let g:bufferline_fixed_index    = -1
+let g:bufferline_solo_highlight = 1
+" Tmuxline
+let g:tmuxline_theme  = 'zenburn'
+let g:tmuxline_preset = {
+  \'a'    : '#(hostname -s)',
+  \'win'  : ['#I #W'],
+  \'cwin' : ['#I #W'],
+  \'x'    : '%d. %b',
+  \'z'    : '%R'}
+
 " Snipmate
 let g:snippets_dir="~/.vim/snippets"
 
