@@ -61,8 +61,8 @@ if [[ `ls --help 2> /dev/null | grep color` == "" ]] ; then
   alias ls='ls -hFG'
   alias ll='ls -aAlhFG'
 else
-  alias ls='ls -hF --color=tty'
-  alias ll='ls -alhF --color=tty'
+  alias ls='ls -hFv --color=tty'
+  alias ll='ls -alhFv --color=tty'
 fi
 alias tm='tmux attach || tmux'
 alias v='vim'
